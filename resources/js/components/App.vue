@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
-        <v-app>
-            <v-container grid-list-md text-xs-center>
+    <div class="">
+        <!-- <v-app>
+            <v-container fluid grid-list-md text-xs-center>
                 <v-layout row wrap>
                   <v-flex xs12>
                     <v-card dark color="orange">
@@ -35,7 +35,7 @@
                   </v-flex>
                 </v-layout>
             </v-container>
-        </v-app>
+        </v-app> -->
         the app loads here
         <router-view></router-view>
     </div>
