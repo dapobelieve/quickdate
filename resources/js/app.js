@@ -1,9 +1,10 @@
 require('./bootstrap');
 import Vuetify from 'vuetify'
 import router from './router'
-// vuetify
+import Vuebar from 'vuebar'
 import 'vuetify/dist/vuetify.min.css'
 Vue.use(Vuetify)
+Vue.use(Vuebar)
 
 
 Vue.component('app', require('./components/App.vue'));
