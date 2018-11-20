@@ -5,10 +5,9 @@
     </v-app>
 </template>
 <script>
-import Navy from './navigation.vue'
+// import Navy from './navigation.vue'
 export default {
     components: {
-        Navy
     }
 }
 </script>

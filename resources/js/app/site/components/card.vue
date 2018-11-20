@@ -1,8 +1,6 @@
 <template>
 <v-card class="rounder">
-    <v-img class="white--text" height="200px" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-    >
-    </v-img>
+    <v-img class="white--text" height="150px" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"></v-img>
     <v-card-title>
         <v-layout row wrap>
             <v-flex d-flex sm6 md6>
@@ -16,7 +14,7 @@
             </v-flex>
             <v-flex d-flex md12>
                 <div class="story-details">
-                    Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui
+                    Curabitur aliquet quam id dui posuere blandit. Vestibulum ac 
                 </div>
             </v-flex>
         </v-layout>
@@ -54,9 +52,6 @@
     color: black;
     font-size: 18px;
     /*font-weight: bold;*/
-}
-.sm-margin {
-    margin-bottom: -20px !important;
 }
 .con-status {
     font-size: small;
