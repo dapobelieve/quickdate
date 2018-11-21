@@ -16,7 +16,7 @@
                   </v-flex>
                   <v-flex d-flex md3>
                     <div class="col-md-3 ryt">
-                      <v-layout style="height: auto;" column>
+                      <v-layout style="height: auto; min-height: 30px" column>
                           <v-flex d-flex md12>
                             <v-card style="overflow-y: scroll" color="white" >
                               <v-list two-line>

@@ -57860,7 +57860,10 @@ var render = function() {
                             _c(
                               "v-layout",
                               {
-                                staticStyle: { height: "auto" },
+                                staticStyle: {
+                                  height: "auto",
+                                  "min-height": "30px"
+                                },
                                 attrs: { column: "" }
                               },
                               [
