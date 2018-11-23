@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar scroll-off-screen flat fixed tile scroll-target="#fix-top" fixed color="#fff" class="mb-5">
+    <v-toolbar scroll-off-screen flat fixed tile scroll-target="#fix-top" color="#fff" class="mb-5">
       <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>      
       <v-spacer class="hidden-md-and-up"></v-spacer>
       <v-toolbar-title>QuickDate</v-toolbar-title>

@@ -15,33 +15,9 @@
                     </div>
                   </v-flex>
                   <v-flex d-flex md3>
-                    <div class="col-md-3 ryt">
-                      <v-layout style="height: auto; min-height: 30px" column>
-                          <v-flex d-flex md12>
-                            <v-card style="overflow-y: scroll" color="white" >
-                              <v-list two-line>
-                                <template >
-                                  <v-subheader>Today</v-subheader>
-                                  <v-divider></v-divider>
-                                  <v-list-tile v-for="i in 12" :key="i" avatar @click="">
-                                    <v-list-tile-avatar>
-                                      <img src="https://cdn.vuetifyjs.com/images/lists/2.jpg">
-                                    </v-list-tile-avatar>
-                                    <v-list-tile-content>
-                                      <v-list-tile-title>
-                                        Summer BBQ <span class="grey--text text--lighten-1">4</span>
-                                      </v-list-tile-title>
-                                      <v-list-tile-sub-title>
-                                        <span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?
-                                      </v-list-tile-sub-title>
-                                    </v-list-tile-content>
-                                  </v-list-tile>
-                                </template>
-                              </v-list>
-                            </v-card>
-                          </v-flex>
-                      </v-layout>
-                    </div>
+                    <!-- <div > -->
+                      <chat></chat>
+                    <!-- </div> -->
                   </v-flex>
               </v-layout>
           </v-flex>
@@ -53,6 +29,7 @@
 <script>
 import navy from './Navigation.vue'
 import card from './card.vue'
+import chat from './chat.vue'
   export default {
     data () {
       return {
@@ -61,7 +38,8 @@ import card from './card.vue'
     },
     components: {
       navy,
-      card
+      card,
+      chat,
     }
   }
 </script>

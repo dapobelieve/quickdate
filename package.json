@@ -20,6 +20,7 @@
         "vue": "^2.5.17"
     },
     "dependencies": {
+        "localforage": "^1.7.3",
         "vue-router": "^3.0.1",
         "vuebar": "0.0.20",
         "vuetify": "^1.3.8",
