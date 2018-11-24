@@ -28,11 +28,7 @@
     <link href="/assets/css/media-queries.css" rel="stylesheet" media="screen">
     <style>
         body {
-            height: 100%; 
-            margin: 0;
-            overflow: hidden !important;
-            box-sizing: border-box;
-            display: flex;
+            /**/
         }
     </style>
 

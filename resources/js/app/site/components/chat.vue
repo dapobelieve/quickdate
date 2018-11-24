@@ -4,8 +4,7 @@
         <v-flex d-flex md12>
           <v-card  color="white" >
             <v-list two-line>
-              <template >
-                <v-subheader>Today</v-subheader>
+                <v-subheader>Chats</v-subheader>
                 <v-divider></v-divider>
                 <div class="scrollbar" id="scroll-kit">
                   <v-list-tile v-for="i in 12" :key="i" avatar @click="">
@@ -22,7 +21,7 @@
                     </v-list-tile-content>
                   </v-list-tile>
                 </div>
-              </template>
+                <!-- <div>Search <v-icon small>search</v-icon></div> -->
             </v-list>
           </v-card>
         </v-flex>
@@ -36,11 +35,17 @@ export default {
 </script>
 <style scoped>
 .scrollbar {
-  height: 443px;
+  height: 420px;
   overflow-y: scroll;
+  background-color: #f5f5f5
+}
+@media only screen and (min-width: 1400px) {
+  .scrollbar {
+    height: 500px;
+  }
 }
 #scroll-kit::-webkit-scrollbar {
-  width: 4px;
+  width: 5px;
   background-color: red;
 }
 #scroll-kit::-webkit-scrollbar-thumb {

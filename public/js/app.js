@@ -62115,7 +62115,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -62155,7 +62154,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.scrollbar[data-v-5be883d6] {\r\n  height: 443px;\r\n  overflow-y: scroll;\n}\n#scroll-kit[data-v-5be883d6]::-webkit-scrollbar {\r\n  width: 4px;\r\n  background-color: red;\n}\n#scroll-kit[data-v-5be883d6]::-webkit-scrollbar-thumb {\r\n    background-color: #b1acac;\r\n    border-radius: 10px;\n}\n#scroll-kit[data-v-5be883d6]::-webkit-scrollbar-track {\r\n    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);\r\n    background-color: #FFF;\n}\n.ryt[data-v-5be883d6] {\r\n  padding-top: 0 !important;\r\n  position: fixed;\r\n  height: 100%;\n}\r\n", ""]);
+exports.push([module.i, "\n.scrollbar[data-v-5be883d6] {\r\n  height: 420px;\r\n  overflow-y: scroll;\r\n  background-color: #f5f5f5\n}\n@media only screen and (min-width: 1400px) {\n.scrollbar[data-v-5be883d6] {\r\n    height: 500px;\n}\n}\n#scroll-kit[data-v-5be883d6]::-webkit-scrollbar {\r\n  width: 5px;\r\n  background-color: red;\n}\n#scroll-kit[data-v-5be883d6]::-webkit-scrollbar-thumb {\r\n    background-color: #b1acac;\r\n    border-radius: 10px;\n}\n#scroll-kit[data-v-5be883d6]::-webkit-scrollbar-track {\r\n    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);\r\n    background-color: #FFF;\n}\n.ryt[data-v-5be883d6] {\r\n  padding-top: 0 !important;\r\n  position: fixed;\r\n  height: 100%;\n}\r\n", ""]);
 
 // exports
 
@@ -62188,73 +62187,71 @@ var render = function() {
                     "v-list",
                     { attrs: { "two-line": "" } },
                     [
-                      [
-                        _c("v-subheader", [_vm._v("Today")]),
-                        _vm._v(" "),
-                        _c("v-divider"),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "scrollbar",
-                            attrs: { id: "scroll-kit" }
-                          },
-                          _vm._l(12, function(i) {
-                            return _c(
-                              "v-list-tile",
-                              {
-                                key: i,
-                                attrs: { avatar: "" },
-                                on: { click: function($event) {} }
-                              },
-                              [
-                                _c("v-list-tile-avatar", [
-                                  _c("img", {
-                                    attrs: {
-                                      src:
-                                        "https://cdn.vuetifyjs.com/images/lists/2.jpg"
-                                    }
-                                  })
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "v-list-tile-content",
-                                  [
-                                    _c("v-list-tile-title", [
-                                      _vm._v(
-                                        "\n                      Summer BBQ "
-                                      ),
-                                      _c(
-                                        "span",
-                                        {
-                                          staticClass:
-                                            "grey--text text--lighten-1"
-                                        },
-                                        [_vm._v("4")]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("v-list-tile-sub-title", [
-                                      _c(
-                                        "span",
-                                        { staticClass: "text--primary" },
-                                        [_vm._v("Sandra Adams")]
-                                      ),
-                                      _vm._v(
-                                        " — Do you have Paris recommendations? Have you ever been?\n                    "
-                                      )
-                                    ])
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          })
-                        )
-                      ]
+                      _c("v-subheader", [_vm._v("Chats")]),
+                      _vm._v(" "),
+                      _c("v-divider"),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "scrollbar",
+                          attrs: { id: "scroll-kit" }
+                        },
+                        _vm._l(12, function(i) {
+                          return _c(
+                            "v-list-tile",
+                            {
+                              key: i,
+                              attrs: { avatar: "" },
+                              on: { click: function($event) {} }
+                            },
+                            [
+                              _c("v-list-tile-avatar", [
+                                _c("img", {
+                                  attrs: {
+                                    src:
+                                      "https://cdn.vuetifyjs.com/images/lists/2.jpg"
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "v-list-tile-content",
+                                [
+                                  _c("v-list-tile-title", [
+                                    _vm._v(
+                                      "\n                      Summer BBQ "
+                                    ),
+                                    _c(
+                                      "span",
+                                      {
+                                        staticClass:
+                                          "grey--text text--lighten-1"
+                                      },
+                                      [_vm._v("4")]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("v-list-tile-sub-title", [
+                                    _c(
+                                      "span",
+                                      { staticClass: "text--primary" },
+                                      [_vm._v("Sandra Adams")]
+                                    ),
+                                    _vm._v(
+                                      " — Do you have Paris recommendations? Have you ever been?\n                    "
+                                    )
+                                  ])
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        })
+                      )
                     ],
-                    2
+                    1
                   )
                 ],
                 1
