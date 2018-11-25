@@ -1,24 +1,24 @@
 <template>
   <div>
-    <v-toolbar scroll-off-screen flat fixed tile scroll-target="#fix-top" color="#fff" class="mb-5">
+    <v-toolbar scroll-off-screen flat fixed tile scroll-target="#fix-top" color="#fff" elevation-2 class="mb-5">
       <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>      
       <v-spacer class="hidden-md-and-up"></v-spacer>
-      <v-toolbar-title>QuickDate</v-toolbar-title>
+      <v-toolbar-side-icon :to="{name: 'user-home'}">QuickDate</v-toolbar-side-icon>
 
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn flat>Link One</v-btn>
-        <v-btn flat>Link Two</v-btn>
+        <v-btn :to="{name: 'user-profile'}" flat>Profile</v-btn>
         <v-spacer></v-spacer>
-          <v-menu  attach nudge-left="75" bottom position-y min-width="200" offset-y>
-            <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
-            <v-list style="border-radius: 20px">
-              <v-list-tile v-for="(item, index) in items" :key="index" @click="">
-                <v-list-tile-title class="text-xs-center">{{ item.title }}</v-list-tile-title>
-              </v-list-tile>
-            </v-list>
-          </v-menu>
       </v-toolbar-items>
+      <v-menu class="hidden-sm-and-down" attach nudge-left="75" bottom min-width="200" offset-y>
+        <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
+        <v-list style="margin-top: 2px; border-radius: 20px;">
+          <v-list-tile v-for="(item, index) in items" :key="index" @click="">
+            <v-list-tile-title class="text-xs-center">{{ item.title }}</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
       <v-spacer></v-spacer>
     </v-toolbar>
 

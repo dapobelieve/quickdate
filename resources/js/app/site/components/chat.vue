@@ -4,7 +4,7 @@
         <v-flex d-flex md12>
           <v-card  color="white" >
             <v-list two-line>
-                <v-subheader>Chats</v-subheader>
+                <v-subheader >Chats</v-subheader>
                 <v-divider></v-divider>
                 <div class="scrollbar" id="scroll-kit">
                   <v-list-tile v-for="i in 12" :key="i" avatar @click="">
@@ -35,9 +35,13 @@ export default {
 </script>
 <style scoped>
 .scrollbar {
-  height: 420px;
+  height: 72vh;
+  scroll-behavior: smooth;
   overflow-y: scroll;
-  background-color: #f5f5f5
+  z-index: 20;
+  /*right: 0;*/
+  /*left: 0;*/
+  background-color: #fff
 }
 @media only screen and (min-width: 1400px) {
   .scrollbar {
@@ -59,6 +63,6 @@ export default {
 .ryt {
   padding-top: 0 !important;
   position: fixed;
-  height: 100%;
+  /*height: 100%;*/
 }
 </style>

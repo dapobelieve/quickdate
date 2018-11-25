@@ -27,8 +27,11 @@
     <!-- Media Queries -->
     <link href="/assets/css/media-queries.css" rel="stylesheet" media="screen">
     <style>
+        body.noScroll { /* ...or body.dialogShowing */
+          overflow: hidden !important;
+        }
         body {
-            /**/
+            overflow: hidden !important;
         }
     </style>
 

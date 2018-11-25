@@ -8,7 +8,7 @@
                     <span class="user-name">Dapo surajulationsdlasdklnasdklaslkdnaodas</span>
                     <span class="user-age">,&nbsp;28 </span>
                     <span class="">
-                        &nbsp;<v-icon class="online">check_circle</v-icon>
+                        <img style="margin-left: 20px" src="assets/online.png" alt="">
                     </span>
                 </p>
             </v-flex>
