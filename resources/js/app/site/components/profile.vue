@@ -3,25 +3,45 @@
     <v-flex xs12 >
       <v-card class="rounder">
         <v-img class="mb-5 pb-5" src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75">
-          <v-flex md12 align-self="center">
-            <v-card-text >
-              <h5 style="color: white" class="title font-weight-bold">Dapo Believe</h5>
-            </v-card-text>
+          <v-flex d-flex md12>
+            <v-layout row wrap>
+              <v-flex d-flex md6>
+                <v-card-text>
+                  <h5 style="color: white" class="title font-weight-bold">Dapo Believe</h5>
+                </v-card-text>
+              </v-flex>
+              <v-flex d-flex md6></v-flex>
+            </v-layout>
+            
           </v-flex>
         </v-img>
-        <v-layout row wrap >
-          <v-flex style="margin-top: -156px; margin-left: 40px" md3>
-            <v-card class="rounder">
+        <v-layout row wrap style="margin-top: -200px; margin-bottom: 24px" >
+          <v-flex style="align-self: center; margin-bottom: 90px" md3 offset-md1>
+            <v-card width="215" class="rounder">
               <v-img class="white--text" height="200px" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg">
                 <v-container >
-                  <v-layout fill-height>
-                    <v-flex align-end xs12 flexbox>
-                      <v-btn>Upload Picture</v-btn>
+                  <v-layout row wrap>
+                    <v-flex align-self-end xs12 d-flex>
+                      <v-btn style="margin-top: 155px">Upload Picture</v-btn>
                     </v-flex>
                   </v-layout>
                 </v-container>
               </v-img>
             </v-card>
+          </v-flex>
+          <v-flex d-flex sm12 md6  class="name-info">
+            <v-layout row wrap>
+              <v-flex md12>
+                <h1 class="username headline font-weight-bold">Believe, 30</h1>
+                <div class="bio">
+                  <h1 class="about font-weight-bold">About me</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eligendi eaque adipisci. Molestiae voluptates quos expedita beatae iste debitis iure mollitia odit accusantium, quaerat aliquid! Natus numquam incidunt ut, repellat dolores nisi veritatis, magni modi minus similique architecto culpa iste, fugit repudiandae voluptas assumenda temporibus iusto repellendus officiis consequuntur. Fugit eius, vitae quis. Hic optio dolorem laboriosam nihil libero rerum.</p>
+                </div>
+              </v-flex>
+              <v-flex d-flex md12>
+                
+              </v-flex>
+            </v-layout>
           </v-flex>
         </v-layout>
       </v-card>
@@ -98,12 +118,27 @@ export default {
 }
 </script>
 <style>
+.name-info {
+  margin-top: -96px; 
+  z-index: 0; 
+  align-self: flex-end;
+}
 .rounder {
   border-radius: 5px;
+}
+.about {
+  color: #171414;
+  margin: 0;
+  font-size: 19px; 
 }
 .lft {
   overflow-y: hidden;
   overflow-x: hidden;
   max-height: auto;
+}
+.username {
+  margin: 0; 
+  font-size: 28px; 
+  color: white !important;
 }
 </style>
