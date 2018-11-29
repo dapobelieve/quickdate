@@ -58116,7 +58116,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.name-info {\r\n  margin-top: -96px; \r\n  z-index: 0; \r\n  -ms-flex-item-align: end; \r\n      align-self: flex-end;\n}\n.rounder {\r\n  border-radius: 5px;\n}\n.about {\r\n  color: #171414;\r\n  margin: 0;\r\n  font-size: 19px;\n}\n.lft {\r\n  overflow-y: hidden;\r\n  overflow-x: hidden;\r\n  max-height: auto;\n}\n.username {\r\n  margin: 0; \r\n  font-size: 28px; \r\n  color: white !important;\n}\r\n", ""]);
+exports.push([module.i, "\n@media only screen and (max-width: 900px) {\n.bio {\r\n    margin-top: 25px;\n}\n}\n.bio {\r\n  /*margin-top: 205px*/\n}\n.name-info {\r\n  margin-top: -96px; \r\n  z-index: 0; \r\n  -ms-flex-item-align: end; \r\n      align-self: flex-end;\n}\n.rounder {\r\n  border-radius: 5px;\n}\n.about {\r\n  color: #171414;\r\n  margin: 0;\r\n  margin-top: 30px;\r\n  font-size: 19px;\n}\n.lft {\r\n  overflow-y: hidden;\r\n  overflow-x: hidden;\r\n  max-height: auto;\n}\n.username {\r\n  margin: 0; \r\n  font-size: 28px; \r\n  color: white !important;\n}\r\n", ""]);
 
 // exports
 
@@ -58127,12 +58127,6 @@ exports.push([module.i, "\n.name-info {\r\n  margin-top: -96px; \r\n  z-index: 0
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -58276,39 +58270,34 @@ var render = function() {
                   }
                 },
                 [
-                  _c(
-                    "v-flex",
-                    { attrs: { "d-flex": "", md12: "" } },
-                    [
-                      _c(
-                        "v-layout",
-                        { attrs: { row: "", wrap: "" } },
-                        [
-                          _c(
-                            "v-flex",
-                            { attrs: { "d-flex": "", md6: "" } },
-                            [
-                              _c("v-card-text", [
-                                _c(
-                                  "h5",
-                                  {
-                                    staticClass: "title font-weight-bold",
-                                    staticStyle: { color: "white" }
-                                  },
-                                  [_vm._v("Dapo Believe")]
-                                )
-                              ])
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c("v-flex", { attrs: { "d-flex": "", md6: "" } })
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
+                  _c("v-flex", { attrs: { "d-flex": "", md12: "" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticStyle: {
+                          display: "flex",
+                          "justify-content": "space-between"
+                        }
+                      },
+                      [
+                        _c(
+                          "h5",
+                          {
+                            staticClass: "title font-weight-bold",
+                            staticStyle: { color: "white" }
+                          },
+                          [_vm._v("Dapo Believe")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-btn",
+                          { staticStyle: { "align-self": "flex-end" } },
+                          [_vm._v("Update Cover")]
+                        )
+                      ],
+                      1
+                    )
+                  ])
                 ],
                 1
               ),
@@ -58330,7 +58319,7 @@ var render = function() {
                         "align-self": "center",
                         "margin-bottom": "90px"
                       },
-                      attrs: { md3: "", "offset-md1": "" }
+                      attrs: { xs6: "", sm6: "", md3: "", "offset-md1": "" }
                     },
                     [
                       _c(
@@ -58405,31 +58394,31 @@ var render = function() {
                         { attrs: { row: "", wrap: "" } },
                         [
                           _c("v-flex", { attrs: { md12: "" } }, [
-                            _c(
-                              "h1",
-                              {
-                                staticClass:
-                                  "username headline font-weight-bold"
-                              },
-                              [_vm._v("Believe, 30")]
-                            ),
-                            _vm._v(" "),
                             _c("div", { staticClass: "bio" }, [
                               _c(
                                 "h1",
-                                { staticClass: "about font-weight-bold" },
-                                [_vm._v("About me")]
-                              ),
-                              _vm._v(" "),
-                              _c("p", [
-                                _vm._v(
-                                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eligendi eaque adipisci. Molestiae voluptates quos expedita beatae iste debitis iure mollitia odit accusantium, quaerat aliquid! Natus numquam incidunt ut, repellat dolores nisi veritatis, magni modi minus similique architecto culpa iste, fugit repudiandae voluptas assumenda temporibus iusto repellendus officiis consequuntur. Fugit eius, vitae quis. Hic optio dolorem laboriosam nihil libero rerum."
-                                )
-                              ])
+                                {
+                                  staticClass:
+                                    "username headline font-weight-bold"
+                                },
+                                [_vm._v("Believe, 30")]
+                              )
                             ])
                           ]),
                           _vm._v(" "),
-                          _c("v-flex", { attrs: { "d-flex": "", md12: "" } })
+                          _c("v-flex", { attrs: { md12: "" } }, [
+                            _c(
+                              "h1",
+                              { staticClass: "about font-weight-bold" },
+                              [_vm._v("About me")]
+                            ),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eligendi eaque adipisci. Molestiae voluptates quos expedita beatae iste debitis iure mollitia odit accusantium, quaerat aliquid! Natus numquam incidunt ut,"
+                              )
+                            ])
+                          ])
                         ],
                         1
                       )
