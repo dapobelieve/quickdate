@@ -1,7 +1,8 @@
 require('./bootstrap');
 import Vuetify from 'vuetify'
 import router from './router'
-// import Vuebar from 'vuebar'
+import Datetime from 'vue-datetime'
+import '../../node_modules/vue-datetime/dist/vue-datetime.css';
 import localforage from 'localforage'
 import store from './store'
 import 'vuetify/dist/vuetify.min.css'
@@ -11,6 +12,8 @@ localforage.config({
     driver: localforage.LOCALSTORAGE,
     storeName: 'QuickDate'
 })
+
+Vue.use(Datetime)
 Vue.use(Vuetify)
 // Vue.use(Vuebar)
 

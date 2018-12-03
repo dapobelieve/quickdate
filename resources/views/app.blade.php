@@ -24,6 +24,16 @@
     <link href="/assets/css/style.css" rel="stylesheet" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
 
+    <script>
+        window.Laravel = {!!
+                json_encode([
+                    'key' => [
+                        'pusher' => config('broadcasting.connections.pusher.key')
+                    ]
+                ])
+            !!}
+    </script>
+
     <!-- Media Queries -->
     <link href="/assets/css/media-queries.css" rel="stylesheet" media="screen">
     <style>

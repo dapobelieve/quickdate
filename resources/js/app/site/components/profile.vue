@@ -2,16 +2,51 @@
 <v-layout class="lft" row wrap> 
     <v-flex xs12 >
       <v-card class="rounder">
-        <v-img class="mb-5 pb-5" src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75">
-          <v-flex d-flex md12>
-            <div style="display: flex; justify-content: space-between;">
-              <h5 style=" color: white" class="title font-weight-bold">Dapo Believe</h5>
-              <v-btn style="align-self: flex-end;">Update Cover</v-btn>
-            </div>
-          </v-flex>
-        </v-img>
-        <v-layout row wrap style="margin-top: -200px; margin-bottom: 24px" >
-          <v-flex style="align-self: center; margin-bottom: 90px" xs6 sm6 md3 offset-md1>
+        <v-img height="350" class="mb-5" src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75">
+        </v-img>        
+      <v-layout mx-3 class="user-data" column wrap>
+        <v-flex d-flex xs12 sm7 class="mb-5">
+            <v-layout row wrap>
+                <v-flex d-flex sm6 md3>
+                  <v-card color="indigo lighten-2" width="215" class="rounder">
+                    <v-img class="white--text"widht="400px" height="200px" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg">
+                      <v-container >
+                        <v-layout row wrap>
+                          <v-flex align-self-end xs12 d-flex>
+                            <v-btn style="margin-top: 155px">Upload Picture</v-btn>
+                          </v-flex>
+                        </v-layout>
+                      </v-container>
+                    </v-img>
+                  </v-card>
+                </v-flex>
+               <!--  <v-flex> -->
+                <v-flex d-flex md9>
+                  <v-layout row wrap>
+                    <v-flex d-flex sm12 md12 align-content-end>
+                      <!-- <v-card-title class="user-name  headline">
+                        Believe, 30
+                      </v-card-title> -->
+                    </v-flex>
+                    <v-flex d-flex sm12 md12>
+                      <v-card-title class="user-name  headline">
+                        Believe, 30
+                      </v-card-title>
+                    </v-flex>
+                    <v-flex d-flex sm12 md12>
+                      <v-card color="green lighten-2" dark tile flat>
+                        <v-card-text> 1 {{ lorem.slice(0, 70) }}</v-card-text>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-flex>
+            </v-layout>
+        </v-flex>
+        
+      </v-layout>
+      </v-card>
+      <!-- <v-layout row wrap style="margin-top: -200px; margin-bottom: 24px" >
+          <v-flex style="align-self: center; margin-bottom: 90px" xs6 sm6 offset-sm3 md3 offset-md1>
             <v-card width="215" class="rounder">
               <v-img class="white--text" height="200px" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg">
                 <v-container >
@@ -24,9 +59,9 @@
               </v-img>
             </v-card>
           </v-flex>
-          <v-flex d-flex sm12 md6  class="name-info">
+          <v-flex d-flex sm6 md6  class="name-info">
             <v-layout row wrap >
-              <v-flex md12>
+              <v-flex  md12>
                 <div class="bio">
                 <h1 class="username headline font-weight-bold">Believe, 30</h1>
                 </div>
@@ -37,63 +72,9 @@
               </v-flex>
             </v-layout>
           </v-flex>
-        </v-layout>
-      </v-card>
+      </v-layout> -->
     </v-flex>
-    <v-layout column wrap>
-        <v-flex d-flex xs12 sm7>
-            <v-layout row wrap>
-                <v-flex d-flex md6>
-                    <v-card color="indigo lighten-2" dark tile flat>
-                      <v-card-text> 1 {{ lorem.slice(0, 70) }}</v-card-text>
-                    </v-card>
-                </v-flex>
-                <v-flex d-flex md6>
-                    <v-layout row wrap>
-                      <v-flex d-flex md8>
-                        <v-card color="amber lighten-2" tile flat>
-                          <v-card-text> 2 {{ lorem.slice(0, 40) }}</v-card-text>
-                        </v-card>
-                      </v-flex>
-                      <v-flex d-flex md4>
-                        <v-card color="amber lighten-2" tile flat>
-                          <v-card-text> 3 {{ lorem.slice(0, 40) }}</v-card-text>
-                        </v-card>
-                      </v-flex>
-                      <v-flex d-flex md6>
-                        <v-card color="amber lighten-2" tile flat>
-                          <v-card-text> 2 {{ lorem.slice(0, 40) }}</v-card-text>
-                        </v-card>
-                      </v-flex>
-                      <v-flex d-flex md6>
-                        <v-card color="amber lighten-2" tile flat>
-                          <v-card-text> 3 {{ lorem.slice(0, 40) }}</v-card-text>
-                        </v-card>
-                      </v-flex>
-                    </v-layout>
-                </v-flex>
-                <v-flex d-flex md4 sm6>
-                    <v-card color="indigo lighten-2" dark tile flat>
-                        <v-card-text> 1 {{ lorem.slice(0, 70) }}</v-card-text>
-                    </v-card>
-                </v-flex>
-                <v-flex d-flex md8 sm6>
-                    <v-layout row wrap>
-                        <v-flex d-flex md6>
-                            <v-card color="dark lighten-2" dark tile flat>
-                                <v-card-text> 1 {{ lorem.slice(0, 70) }}</v-card-text>
-                            </v-card>
-                        </v-flex>
-                        <v-flex d-flex md6>
-                            <v-card color="red lighten-2" dark tile flat>
-                                <v-card-text> 1 {{ lorem.slice(0, 70) }}</v-card-text>
-                            </v-card>
-                        </v-flex>
-                    </v-layout>
-                </v-flex>
-            </v-layout>
-        </v-flex>
-    </v-layout>
+    
 </v-layout>
 </template>
 <script>
@@ -112,6 +93,15 @@ export default {
 }
 </script>
 <style>
+.user-name {
+  font-weight: 600;
+  color: white;
+  z-index: 1000
+}
+.user-data {
+  margin-top: -200px !important;
+  margin-bottom: 0px !important;
+}
 @media only screen and (max-width: 900px) {
   .bio {
     margin-top: 25px;

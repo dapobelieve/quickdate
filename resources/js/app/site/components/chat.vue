@@ -45,7 +45,7 @@ export default {
 }
 @media only screen and (min-width: 1400px) {
   .scrollbar {
-    height: 500px;
+    /*height: 500px;*/
   }
 }
 #scroll-kit::-webkit-scrollbar {
