@@ -35,7 +35,7 @@ export default {
 </script>
 <style scoped>
 .scrollbar {
-  height: 72vh;
+  height: 68vh;
   scroll-behavior: smooth;
   overflow-y: scroll;
   z-index: 20;
@@ -43,9 +43,9 @@ export default {
   /*left: 0;*/
   background-color: #fff
 }
-@media only screen and (min-width: 1400px) {
+@media (min-width: 1400px) {
   .scrollbar {
-    /*height: 500px;*/
+    height: 500px;
   }
 }
 #scroll-kit::-webkit-scrollbar {

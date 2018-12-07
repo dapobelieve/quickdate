@@ -1,8 +1,9 @@
 <template>
   <div class="lft pt-5">
     <v-layout row wrap>
-    <v-flex d-flex xs6 sm4 md4 class="lg5-custom pr-2 mb-2" v-for="i in 100" :key="i" >
-      <card :hasImage="i"></card>
+    <v-flex d-flex xs6 sm4 md4 class="lg5-custom pr-2 mb-2" v-for="(user, i) in users" :key="i" >
+        <!-- {{ user }} -->
+      <card :userdata="user"></card>
     </v-flex>
     </v-layout>
   </div>
@@ -10,8 +11,25 @@
 <script>
 import card from './card.vue'
 export default {
+  data () {
+    return {
+      users: []
+    }
+  },
   components: {
     card
+  },
+  mounted () {
+    Echo.join('online')
+    .here((users) => {
+        this.users = users
+    })
+    .joining((user) => {
+        this.users.push(user)
+    })
+    .leaving((user) => {
+        this.users = this.users.filter(u => (u.id !== user.id));
+    })
   }
 }
 </script>
