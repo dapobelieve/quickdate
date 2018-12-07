@@ -7,19 +7,21 @@
                 <v-subheader >Chats</v-subheader>
                 <v-divider></v-divider>
                 <div class="scrollbar" id="scroll-kit">
-                  <v-list-tile v-for="i in 12" :key="i" avatar @click="">
-                    <v-list-tile-avatar>
-                      <img src="https://cdn.vuetifyjs.com/images/lists/2.jpg">
-                    </v-list-tile-avatar>
-                    <v-list-tile-content>
-                      <v-list-tile-title>
-                        Summer BBQ <span class="grey--text text--lighten-1">4</span>
-                      </v-list-tile-title>
-                      <v-list-tile-sub-title>
-                        <span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?
-                      </v-list-tile-sub-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
+                  <router-link :to="{name: 'chatty'}">
+                    <v-list-tile v-for="i in 12" :key="i" avatar @click="">
+                      <v-list-tile-avatar>
+                        <img src="https://cdn.vuetifyjs.com/images/lists/2.jpg">
+                      </v-list-tile-avatar>
+                      <v-list-tile-content>
+                        <v-list-tile-title>
+                          Summer BBQ <span class="grey--text text--lighten-1">4</span>
+                        </v-list-tile-title>
+                        <v-list-tile-sub-title>
+                          <span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?
+                        </v-list-tile-sub-title>
+                      </v-list-tile-content>
+                    </v-list-tile>
+                  </router-link>
                 </div>
                 <!-- <div>Search <v-icon small>search</v-icon></div> -->
             </v-list>

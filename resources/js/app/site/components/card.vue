@@ -3,6 +3,7 @@
     <v-img class="white--text" height="150px" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"></v-img>
     <v-card-title>
         <v-layout row wrap>
+            
             <v-flex align-self-center sm12 md12 v-if="user">
                 <div class="user-details">
                     <span class="user-name">{{ user.name }}</span>

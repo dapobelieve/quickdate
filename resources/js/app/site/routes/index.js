@@ -1,6 +1,7 @@
 import {
     Index,
     Home,
+    Chaty,
     Profile
 }
 from '../components'
@@ -19,6 +20,11 @@ export default [
                 path: '/profile',
                 name: 'user-profile',
                 component: Profile 
+            },
+            {
+                path: '/chat',
+                name: 'chatty',
+                component: Chaty 
             }
         ],
     },
