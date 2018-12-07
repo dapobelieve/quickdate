@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <!-- Page Title -->
-    <title>Quick Date::Paul</title>
+    <title>Quick Date::Believe</title>
 
     <!-- Responsive Metatag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -20,6 +20,29 @@ Vue.use(Vuetify)
 
 Vue.component('app', require('./components/App.vue'));
 
+// localforage.getItem('authtoken').then((token) => {
+//     if(token == null)
+//     {
+//         console.log('not found')
+//     }
+// })
+// .catch(error => {
+//     console.log('token not found')
+// })
+store.dispatch('setToken', '').then((response) => {
+    console.log('the token is--->'+response)
+    store.dispatch('fetchUser').catch((error) => {
+        console.log(error.response)
+        // store.dispatch('clearAuth');
+        router.replace({
+            name: 'homepage'
+        })
+    })
+})
+// .catch(() => {
+//     store.dispatch('clearAuth');
+// })
+
 const app = new Vue({
     el: '#app',
     router,

@@ -216,7 +216,7 @@
           context: this
         })
         .then(() => {
-          this.$router.replace({
+          this.$router.push({
             name: 'user-home'
           })
         })
@@ -229,7 +229,7 @@
           context: this
         })
         .then(() => {
-          this.$router.replace({
+          this.$router.push({
             name: 'user-home'
           })
         })

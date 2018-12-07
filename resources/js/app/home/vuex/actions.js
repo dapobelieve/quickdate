@@ -1,4 +1,5 @@
 import { setHttpToken } from '../../../helpers'
+import localForage from 'localforage'
 
 export const register = ({dispatch, commit}, {payload, context}) => {
     return axios.post('api/register', payload)
@@ -31,6 +32,14 @@ export const login = ({dispatch, commit}, {payload, context}) => {
     })
 }
 
+export const fetchUser = ({ commit }) => {
+    return axios.get('api/me').then((response) => {
+        // console.log(response.data)
+        commit('setAuthUser', true);
+        commit('setUserData', response.data.data)
+    })
+}
+
 export const setToken = ({dispatch, commit}, token) => {
     if (token === ''){
         return dispatch('checkTokenExists', '')
@@ -38,19 +47,21 @@ export const setToken = ({dispatch, commit}, token) => {
             // set axios headers cos its in the storage
             setHttpToken(token)
         })
+    }else {
+        commit('setToken', token)
+        setHttpToken(token)
     }
-
-    commit('setToken', token)
-    setHttpToken(token)
 }
 
 export const checkTokenExists = ({dispatch, commit}, token) => {
-    localForage.getItem('authtoken').then((token) => {
+    return localForage.getItem('authtoken').then((token) => {
         if(!token){
             return Promise.reject('No_Token_Found')
-        }
+        }else {
 
-        return Promise.resolve(token)
+            // console.log('token from checkTokenExists  '+token)
+            return Promise.resolve(token)
+        }
     })
 }
 

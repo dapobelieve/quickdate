@@ -45775,6 +45775,29 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vuetify___default.a);
 
 Vue.component('app', __webpack_require__(243));
 
+// localforage.getItem('authtoken').then((token) => {
+//     if(token == null)
+//     {
+//         console.log('not found')
+//     }
+// })
+// .catch(error => {
+//     console.log('token not found')
+// })
+__WEBPACK_IMPORTED_MODULE_5__store__["a" /* default */].dispatch('setToken', '').then(function (response) {
+    console.log('the token is--->' + response);
+    __WEBPACK_IMPORTED_MODULE_5__store__["a" /* default */].dispatch('fetchUser').catch(function (error) {
+        console.log(error.response);
+        // store.dispatch('clearAuth');
+        __WEBPACK_IMPORTED_MODULE_1__router__["a" /* default */].replace({
+            name: 'homepage'
+        });
+    });
+});
+// .catch(() => {
+//     store.dispatch('clearAuth');
+// })
+
 var app = new Vue({
     el: '#app',
     router: __WEBPACK_IMPORTED_MODULE_1__router__["a" /* default */],
@@ -86906,7 +86929,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
         payload: this.loginForm,
         context: this
       }).then(function () {
-        _this.$router.replace({
+        _this.$router.push({
           name: 'user-home'
         });
       });
@@ -86919,7 +86942,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
         payload: this.registerForm,
         context: this
       }).then(function () {
-        _this2.$router.replace({
+        _this2.$router.push({
           name: 'user-home'
         });
       });
@@ -89061,7 +89084,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   mounted: function mounted() {
     var _this = this;
 
+    alert('Shoud work');
     Echo.join('online').here(function (users) {
+      console.log(users);
       _this.users = users;
     }).joining(function (user) {
       _this.users.push(user);
@@ -89751,19 +89776,19 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(220)
+  __webpack_require__(248)
 }
 var normalizeComponent = __webpack_require__(3)
 /* script */
 var __vue_script__ = __webpack_require__(222)
 /* template */
-var __vue_template__ = __webpack_require__(223)
+var __vue_template__ = __webpack_require__(250)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = "data-v-736c32b4"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -89796,51 +89821,19 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 220 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(221);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(4)("c1c89c7a", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-736c32b4\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./chaty.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-736c32b4\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./chaty.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 221 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.chat-data:first-child {\r\n  margin-top: 30px;\n}\n.chat-data {\r\n/*   background-color: grey; */\r\n  padding: 0 10px 0 10px;\n}\n.chat-history {\r\n  overflow-y: scroll;\r\n  overflow-x: hidden;\r\n  padding: 0px 2px 1px 0px;\r\n  height: 350px;\r\n  display: grid;\r\n  grid-row-gap: 9px;\n}\n.message-data-name {\r\n  font-size: 10px;\r\n  font-weight: bolder;\r\n/*   font-style:  */\n}\n.message-other {\r\n  background-color: grey !important;\n}\n.message {\r\n  border-radius: 10px;\r\n  background-color: yellow;\r\n  max-width: 500px;\r\n  color: black;\n}\n@media only screen and (max-width: 700px){\n.chat-history {\r\n    grid-row-gap: 11px\n}\n}\r\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 220 */,
+/* 221 */,
 /* 222 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
 //
 //
 //
@@ -89882,156 +89875,37 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({
+/* harmony default export */ __webpack_exports__["default"] = (_defineProperty({
   mounted: function mounted() {
     console.log('Welcome to chatty!');
+  },
+
+  data: function data() {
+    return {
+      show: false,
+      message: 'Hey!',
+      marker: true
+
+    };
+  },
+  methods: {
+    triga: function triga() {
+      axios.get('api/me').then(function (response) {
+        // console.log(response.data)
+      }).catch(function (error) {
+        console.log(error.response.data);
+      });
+    },
+    getUser: function getUser() {
+      // alert('works')
+    }
   }
-});
+}, 'mounted', function mounted() {
+  this.getUser();
+}));
 
 /***/ }),
-/* 223 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "v-layout",
-    { attrs: { row: "" } },
-    [
-      _c(
-        "v-flex",
-        { attrs: { xs12: "", sm12: "", md12: "" } },
-        [
-          _c(
-            "v-card",
-            [
-              _c(
-                "v-toolbar",
-                {
-                  staticStyle: { "margin-bottom": "0px" },
-                  attrs: { color: "cyan", dark: "" }
-                },
-                [
-                  _c("v-toolbar-side-icon"),
-                  _vm._v(" "),
-                  _c("v-toolbar-title", [_vm._v("Jane Doe")]),
-                  _vm._v(" "),
-                  _c("v-spacer"),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    { attrs: { icon: "" } },
-                    [_c("v-icon", [_vm._v("search")])],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-list",
-                { staticClass: "chat-history" },
-                _vm._l(5, function(item, index) {
-                  return _c(
-                    "span",
-                    { key: index, staticClass: "chat-data" },
-                    [
-                      _c(
-                        "v-layout",
-                        { attrs: { "align-end": index % 2 == 0, column: "" } },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "small message-data-name" },
-                            [_vm._v("Dapo Believe")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "message pa-2",
-                              class: { "message-other": index % 2 == 1 }
-                            },
-                            [
-                              index % 2 == 0
-                                ? _c("span", {}, [
-                                    _vm._v(
-                                      "\n                  " +
-                                        _vm._s(index) +
-                                        " Hey dear  \n                "
-                                    )
-                                  ])
-                                : _c(
-                                    "span",
-                                    { staticClass: "message-content" },
-                                    [
-                                      _vm._v(
-                                        "\n                  " +
-                                          _vm._s(index) +
-                                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi eaque ullam lab\n                "
-                                      )
-                                    ]
-                                  )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("div", { staticStyle: { "font-size": "10px" } }, [
-                            _vm._v("hello who be")
-                          ])
-                        ]
-                      )
-                    ],
-                    1
-                  )
-                })
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-layout",
-            { attrs: { row: "", wrap: "" } },
-            [
-              _c(
-                "v-flex",
-                { attrs: { xs12: "", md12: "" } },
-                [
-                  _c("v-text-field", {
-                    attrs: {
-                      outline: "",
-                      "append-outer-icon": "mdi-send",
-                      clearable: "",
-                      label: "Message",
-                      type: "text"
-                    }
-                  })
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-736c32b4", module.exports)
-  }
-}
-
-/***/ }),
+/* 223 */,
 /* 224 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -98905,6 +98779,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var setToken = function setToken(state, token) {
     // check empty and remove token
     if (token === '' || token === null) {
+        console.log('token is null here');
         __WEBPACK_IMPORTED_MODULE_0_localforage___default.a.removeItem('authtoken', token);
         return;
     }
@@ -98929,10 +98804,14 @@ var setUserData = function setUserData(state, data) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "register", function() { return register; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUser", function() { return fetchUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setToken", function() { return setToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkTokenExists", function() { return checkTokenExists; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearAuth", function() { return clearAuth; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helpers__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_localforage__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_localforage___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_localforage__);
+
 
 
 var register = function register(_ref, _ref2) {
@@ -98971,36 +98850,48 @@ var login = function login(_ref3, _ref4) {
     });
 };
 
-var setToken = function setToken(_ref5, token) {
-    var dispatch = _ref5.dispatch,
-        commit = _ref5.commit;
+var fetchUser = function fetchUser(_ref5) {
+    var commit = _ref5.commit;
+
+    return axios.get('api/me').then(function (response) {
+        // console.log(response.data)
+        commit('setAuthUser', true);
+        commit('setUserData', response.data.data);
+    });
+};
+
+var setToken = function setToken(_ref6, token) {
+    var dispatch = _ref6.dispatch,
+        commit = _ref6.commit;
 
     if (token === '') {
         return dispatch('checkTokenExists', '').then(function (token) {
             // set axios headers cos its in the storage
             Object(__WEBPACK_IMPORTED_MODULE_0__helpers__["a" /* setHttpToken */])(token);
         });
+    } else {
+        commit('setToken', token);
+        Object(__WEBPACK_IMPORTED_MODULE_0__helpers__["a" /* setHttpToken */])(token);
     }
-
-    commit('setToken', token);
-    Object(__WEBPACK_IMPORTED_MODULE_0__helpers__["a" /* setHttpToken */])(token);
 };
 
-var checkTokenExists = function checkTokenExists(_ref6, token) {
-    var dispatch = _ref6.dispatch,
-        commit = _ref6.commit;
+var checkTokenExists = function checkTokenExists(_ref7, token) {
+    var dispatch = _ref7.dispatch,
+        commit = _ref7.commit;
 
-    localForage.getItem('authtoken').then(function (token) {
+    return __WEBPACK_IMPORTED_MODULE_1_localforage___default.a.getItem('authtoken').then(function (token) {
         if (!token) {
             return Promise.reject('No_Token_Found');
-        }
+        } else {
 
-        return Promise.resolve(token);
+            // console.log('token from checkTokenExists  '+token)
+            return Promise.resolve(token);
+        }
     });
 };
 
-var clearAuth = function clearAuth(_ref7) {
-    var commit = _ref7.commit;
+var clearAuth = function clearAuth(_ref8) {
+    var commit = _ref8.commit;
 
     commit('setAuthUser', false);
     commit('setUserData', null);
@@ -99157,6 +99048,209 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 247 */,
+/* 248 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(249);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(4)("956efed0", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-736c32b4\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./chaty.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-736c32b4\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./chaty.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 249 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.chat-data[data-v-736c32b4]:first-child {\r\n  margin-top: 30px;\n}\n.chat-data[data-v-736c32b4] {\r\n/*   background-color: grey; */\r\n  padding: 0 10px 0 10px;\n}\n.chat-history[data-v-736c32b4] {\r\n  overflow-y: scroll;\r\n  overflow-x: hidden;\r\n  padding: 0px 2px 1px 0px;\r\n  height: 350px;\r\n  display: grid;\r\n  grid-row-gap: 9px;\n}\n.message-data-name[data-v-736c32b4] {\r\n  font-size: 10px;\r\n  font-weight: bolder;\r\n/*   font-style:  */\n}\n.message-other[data-v-736c32b4] {\r\n  background-color: grey !important;\n}\n.message[data-v-736c32b4] {\r\n  border-radius: 10px;\r\n  background-color: yellow;\r\n  max-width: 500px;\r\n  color: black;\n}\n@media only screen and (max-width: 700px){\n.chat-history[data-v-736c32b4] {\r\n    grid-row-gap: 11px\n}\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 250 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-layout",
+    { attrs: { row: "" } },
+    [
+      _c(
+        "v-flex",
+        { attrs: { xs12: "", sm12: "", md12: "" } },
+        [
+          _c(
+            "v-card",
+            { attrs: { color: "lightgrey" } },
+            [
+              _c(
+                "v-toolbar",
+                {
+                  staticStyle: { "margin-bottom": "0px" },
+                  attrs: { color: "cyan", dark: "" }
+                },
+                [
+                  _c("v-toolbar-side-icon"),
+                  _vm._v(" "),
+                  _c("v-toolbar-title", [_vm._v("Jane Doe")]),
+                  _vm._v(" "),
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    { attrs: { icon: "" } },
+                    [_c("v-icon", [_vm._v("search")])],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-list",
+                { staticClass: "chat-history" },
+                _vm._l(5, function(item, index) {
+                  return _c(
+                    "span",
+                    { key: index, staticClass: "chat-data" },
+                    [
+                      _c(
+                        "v-layout",
+                        { attrs: { "align-end": index % 2 == 0, column: "" } },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "small message-data-name" },
+                            [_vm._v("Dapo Believe")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "message pa-2",
+                              class: { "message-other": index % 2 == 1 }
+                            },
+                            [
+                              index % 2 == 0
+                                ? _c("span", {}, [
+                                    _vm._v(
+                                      "\n                  " +
+                                        _vm._s(index) +
+                                        " Hey dear  \n                "
+                                    )
+                                  ])
+                                : _c(
+                                    "span",
+                                    { staticClass: "message-content" },
+                                    [
+                                      _vm._v(
+                                        "\n                  " +
+                                          _vm._s(index) +
+                                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi eaque ullam lab\n                "
+                                      )
+                                    ]
+                                  )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticStyle: { "font-size": "10px" } }, [
+                            _vm._v("hello who be")
+                          ])
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                })
+              ),
+              _vm._v(" "),
+              _c(
+                "v-layout",
+                { attrs: { "mt-2": "", "mb-4": "", row: "", wrap: "" } },
+                [
+                  _c(
+                    "v-flex",
+                    {
+                      attrs: {
+                        "d-flex": "",
+                        xs11: "",
+                        sm11: "",
+                        md11: "",
+                        color: "blue"
+                      }
+                    },
+                    [
+                      _c("v-textarea", {
+                        attrs: {
+                          solo: "",
+                          rows: "2",
+                          label: "Enter your message",
+                          value: ""
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-flex",
+                    { attrs: { "d-flex": "", xs1: "", sm1: "", md1: "" } },
+                    [
+                      _c("v-icon", { on: { click: _vm.triga } }, [
+                        _vm._v("send")
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-736c32b4", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

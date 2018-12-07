@@ -2,7 +2,7 @@
   <!-- <div class="chaty"> -->
     <v-layout row>
       <v-flex xs12 sm12 md12 >
-        <v-card>
+        <v-card color="lightgrey">
           <v-toolbar style="margin-bottom: 0px" color="cyan" dark>
             <v-toolbar-side-icon></v-toolbar-side-icon>
             <v-toolbar-title>Jane Doe</v-toolbar-title>
@@ -28,12 +28,16 @@
               </v-layout>
             </span>
           </v-list>
+          <v-layout mt-2 mb-4 row wrap>
+            <v-flex d-flex  xs11 sm11 md11 color="blue">
+              <v-textarea solo rows="2" label="Enter your message" value=""></v-textarea>
+            </v-flex>
+            <v-flex d-flex xs1 sm1 md1>
+              <v-icon @click="triga">send</v-icon>
+            </v-flex>
+          </v-layout>
         </v-card>
-        <v-layout row wrap>
-          <v-flex xs12 md12>
-            <v-text-field outline append-outer-icon="mdi-send" clearable label="Message" type="text" ></v-text-field>
-          </v-flex>
-        </v-layout>
+        
       </v-flex>
     </v-layout>
   <!-- </div> -->
@@ -42,10 +46,33 @@
 export default {
   mounted(){
     console.log('Welcome to chatty!')
+  },
+  data: () => ({
+    show: false,
+    message: 'Hey!',
+    marker: true,
+    
+  }),
+  methods: {
+    triga () {
+      axios.get('api/me')
+      .then(response => {
+        // console.log(response.data)
+      })
+      .catch(error => {
+        console.log(error.response.data)
+      })
+    },
+    getUser () {
+      // alert('works')
+    }
+  },
+  mounted() {
+    this.getUser();
   }
 }
 </script>
-<style>
+<style scoped>
 .chat-data:first-child {
   margin-top: 30px;
 }

@@ -20,8 +20,10 @@ export default {
     card
   },
   mounted () {
+    alert('Shoud work')
     Echo.join('online')
     .here((users) => {
+      console.log(users)
         this.users = users
     })
     .joining((user) => {
