@@ -20,10 +20,8 @@ export default {
     card
   },
   mounted () {
-    alert('Shoud work')
     Echo.join('online')
     .here((users) => {
-      console.log(users)
         this.users = users
     })
     .joining((user) => {
@@ -32,6 +30,9 @@ export default {
     .leaving((user) => {
         this.users = this.users.filter(u => (u.id !== user.id));
     })
+  },
+  destroyed () {
+    Echo.leave('online');
   }
 }
 </script>

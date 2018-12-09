@@ -30,18 +30,17 @@ Vue.component('app', require('./components/App.vue'));
 //     console.log('token not found')
 // })
 store.dispatch('setToken', '').then((response) => {
-    console.log('the token is--->'+response)
     store.dispatch('fetchUser').catch((error) => {
         console.log(error.response)
-        // store.dispatch('clearAuth');
+        store.dispatch('clearAuth');
         router.replace({
             name: 'homepage'
         })
     })
 })
-// .catch(() => {
-//     store.dispatch('clearAuth');
-// })
+.catch(() => {
+    store.dispatch('clearAuth');
+})
 
 const app = new Vue({
     el: '#app',

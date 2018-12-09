@@ -4,7 +4,6 @@ export const setToken = ((state, token) => {
     // check empty and remove token
     if (token === '' || token === null)
     {
-        console.log('token is null here')
         localForage.removeItem('authtoken', token);
         return;
     }
