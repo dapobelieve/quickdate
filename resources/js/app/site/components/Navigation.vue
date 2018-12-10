@@ -3,7 +3,7 @@
     <v-toolbar scroll-off-screen flat fixed tile scroll-target="#fix-top" color="#fff" elevation-2 class="mb-5">
       <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>      
       <v-spacer class="hidden-md-and-up"></v-spacer>
-      <v-toolbar-side-icon :to="{name: 'user-home'}">QuickDate</v-toolbar-side-icon>
+      <v-toolbar-side-icon :to="{name: 'user-home'}">Quick</v-toolbar-side-icon>
 
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">

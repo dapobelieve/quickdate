@@ -33,6 +33,7 @@ export default {
   },
   destroyed () {
     Echo.leave('online');
+    // alert('Component Destroyed')
   }
 }
 </script>
